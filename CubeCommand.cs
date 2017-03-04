@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeCommand : MonoBehaviour {
+public class CubeCommand: MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //Called by GazeGestureManager when the user performs a Select gesture
+    void OnSelect()
+    {
+        GameObject cube = GameObject.FindGameObjectWithTag("Cube");
+        cube.SetActive(false);
+    }
 }
